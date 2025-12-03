@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ГО НБРПК — Національне бюро з розслідувань та протидії корупції</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- HEADER -->
+  <header class="bg-white shadow p-4">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold flex items-center gap-3"><img src="https://via.placeholder.com/40" class="w-10 h-10 object-cover rounded"/> НБРПК</h1>
+      <nav class="space-x-4 text-lg">
+        <a href="#about" class="hover:text-blue-600">Про нас</a>
+        <a href="#mission" class="hover:text-blue-600">Місія</a>
+        <a href="#reports" class="hover:text-blue-600">Звіти</a>
+        <a href="#contact" class="hover:text-blue-600">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-blue-600 text-white py-20">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Національне бюро з розслідувань та протидії корупції</h2>
+      <p class="text-xl mb-6">Прозора влада. Сильні громади. Жодних компромісів із корупцією.</p>
+      <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded font-semibold hover:bg-gray-200">Приєднатися</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold mb-4">Про організацію</h3>
+    <p class="text-lg leading-relaxed">
+      ГО «НБРПК» створена для боротьби з корупцією в органах місцевої влади. Ми проводимо громадські розслідування, допомагаємо викривачам, аналізуємо бюджетні процеси та контролюємо прозорість рішень посадовців.
+    </p>
+  </section>
+
+  <!-- MISSION -->
+  <section id="mission" class="bg-white py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Наша місія</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-50 rounded shadow">
+          <h4 class="text-xl font-semibold mb-2">Розслідування</h4>
+          <p>Проводимо незалежні антикорупційні розслідування та формуємо офіційні звернення.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded shadow">
+          <h4 class="text-xl font-semibold mb-2">Прозорість</h4>
+          <p>Контролюємо відкритість рішень місцевої влади та бюджетних витрат.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded shadow">
+          <h4 class="text-xl font-semibold mb-2">Підтримка громади</h4>
+          <p>Навчаємо громадян інструментам контролю влади та правової безпеки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTS -->
+  <section id="reports" class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold mb-6">Звіти та публікації</h3>
+    <ul class="space-y-4">
+      <li class="p-4 bg-white rounded shadow">Звіт за 2024 рік — Аналіз ризиків корупції в громадах</li>
+      <li class="p-4 bg-white rounded shadow">Моніторинг державних закупівель — квітень 2025</li>
+      <li class="p-4 bg-white rounded shadow">Довідник викривача корупції (PDF)</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-gray-200 py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Контакти</h3>
+      <p class="mb-4 text-lg">Напишіть нам, якщо хочете долучитися або повідомити про корупцію.</p>
+
+      <form class="bg-white p-6 rounded shadow grid gap-4 max-w-lg">
+        <input type="text" placeholder="Ваше ім’я" class="border p-2 rounded" />
+        <input type="email" placeholder="Email" class="border p-2 rounded" />
+        <textarea placeholder="Повідомлення" rows="4" class="border p-2 rounded"></textarea>
+        <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Надіслати</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-600">© 2025 ГО НБРПК. Усі права захищено.  
+  <!-- NEWS (оновлений блок) -->
+  <section id="news" class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold mb-6">Новини</h3>
+
+    <!-- СПИСОК НОВИН -->
+    <div id="news-list" class="space-y-6"></div>
+
+    <!-- ФОРМА ДОДАВАННЯ НОВИНИ (видима тільки адміну) -->
+    <div id="admin-panel" class="mt-10 bg-white p-4 rounded shadow hidden">
+      <h4 class="text-xl font-semibold mb-4">Додати новину</h4>
+      <div class="grid gap-3">
+        <input id="n-title" class="border p-2 rounded" placeholder="Заголовок новини" />
+        <input id="n-img" class="border p-2 rounded" placeholder="URL зображення (опціонально)" />
+        <textarea id="n-text" class="border p-2 rounded" rows="3" placeholder="Текст новини"></textarea>
+        <input id="n-date" class="border p-2 rounded" placeholder="Дата (наприклад 15.01.2025)" />
+        <button onclick="addNewsBlock()" class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Додати</button>
+      </div>
+    </div>
+
+    <!-- Кнопка для входу адміністратора -->
+    <div class="mt-6 text-center">
+      <button onclick="adminLogin()" class="px-4 py-2 bg-gray-700 text-white rounded hover:bg-black">Адмін-вхід</button>
+    </div>
+
+    <script>
+      function adminLogin() {
+        const pass = prompt('Введіть пароль адміністратора:');
+        if (pass === '12345') {
+          document.getElementById('admin-panel').classList.remove('hidden');
+          alert('Адмін-панель увімкнена');
+        } else {
+          alert('Невірний пароль');
+        }
+      }
+    </script>
+
+    <script>
+      function addNewsBlock() {
+        const title = document.getElementById('n-title').value;
+        const img = document.getElementById('n-img').value;
+        const text = document.getElementById('n-text').value;
+        const date = document.getElementById('n-date').value;
+
+        if (!title || !text || !date) {
+          alert('Будь ласка, заповніть заголовок, текст і дату.');
+          return;
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.className = "bg-white p-4 rounded shadow";
+
+        wrapper.innerHTML = `
+          ${img ? `<img src='${img}' class='w-full h-56 object-cover rounded mb-3' />` : ''}
+          <h4 class='text-xl font-semibold mb-2'>${title}</h4>
+          <p class='text-gray-700 mb-2'>${text}</p>
+          <p class='text-xs text-gray-500'>${date}</p>
+        `;
+
+        document.getElementById('news-list').prepend(wrapper);
+
+        document.getElementById('n-title').value = '';
+        document.getElementById('n-img').value = '';
+        document.getElementById('n-text').value = '';
+        document.getElementById('n-date').value = '';
+      }
+    </script>
+
+  </section>
+
+</footer>
+</body>
+</html>
